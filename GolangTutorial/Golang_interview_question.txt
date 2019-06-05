@@ -1,0 +1,96 @@
+Golang Interview Questions:
+
+Why Golang?
+Advantages vs disadvantages of golang?
+Golang vs other languages?
+Go compiler?
+Go is oops based or procedural?
+Go Data types (boolean, numeric, string, derived)?
+Static vs dynamic type variable initialisation?
+What is const?
+For loop in golang?
+String concat (join, sprints, bytes.Buffer)?
+String formatting?
+Why no classes in golang?
+String conversion?
+Call by value vs call by reference?
+Go methods or receivers?
+Go function closures?
+Go function as values?
+Rune vs bytes vs string?
+Slices in golang?
+Range?
+Pointer?
+Nil pointer?
+Uses of pointer?
+Pointer to pointer?
+Error handling?
+Go routine?
+Why go routine is lightweight thread?
+Concurrency & Synchronisation in golang?
+Channels?
+Buffered vs unbuffered channels?
+Close in go routine?
+Select in golang?
+Select vs switch?
+Sync.Waitgroup?
+uni directional channels vs bi directional channels usage and why?
+Default state of channel?
+Anonymous goroutine?
+Channel as data type possible and how?
+When channel blocks?
+Panic error in channels?
+Deadlock in go routine?
+Default in select & why?
+sync.mutex and why?
+When to use mutex?
+When select blocks?
+If multiple condition applies on select what will happen blocks or random selection?
+How range works in buffered channel and Pythagoras cup?
+What is sync.Once?
+Types of locking in mutex?
+Zero value of mutex?
+One way locking in mutex (RLock & RUnlock)?
+Usage of mutex?
+Methods & pointer indirection usage?
+Why to use pointer receiver?
+Value vs pointer receiver?
+When to use value receiver?
+When to use pointer receiver?
+What is Interfaces?
+What is the Default value of interface?
+Why interface?
+Multiple inheritance in interface?
+What is Empty interface?
+Types of interface?
+Stringers?
+Break vs continue?
+Golang features (case sensitive, no classes & objects, no generic programming, no inheritance, no method overloading, no pointer arithmetic)?
+Array?
+2d array and how to initialise it?
+Array slice?
+Cap vs size(Len)?
+Array pointer?
+Try catch exception in golang?
+What is Struct?
+Why struct?
+What is Defer?
+Defer stack call?
+json encoding & decoding?
+json omit empty?
+What is Maps?
+Zero value of map?
+Map with struct, map, array, interface?
+What is Panic error?
+Why package main?
+Type assertion?
+Type conversion?
+Sorting vs sort.Interface?
+Flag in golang?
+Context in golang?
+Why context and when to use?
+Cancellation event using context?
+Context background vs todo?
+Time based deadline in context?
+Why context cancellation should not to be used?
+Value setting in context?
