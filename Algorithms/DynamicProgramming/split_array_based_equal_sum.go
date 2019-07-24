@@ -1,53 +1,45 @@
+package main
+
+import "fmt"
 
 //O(n)
-def findSplitPoint(arr, n) : 
-	# traverse array element and 
-	# compute sum of whole array 
-	leftSum = 0
-	for i in range(0, n) : 
+func findSplitPoint(arr []int, n int) int { 
+	
+	leftSum := 0
+	for i:=0; i<n; i++ { 
 		leftSum += arr[i] 
+	}
 
-	# again traverse array and 
-	# compute right sum and also 
-	# check left_sum equal to 
-	# right sum or not 
-	rightSum = 0
-	for i in range(n-1, -1, -1) : 
-		# add current element 
-		# to right_sum 
+	rightSum := 0
+	for i:=n-1; i>-1; i-- { 
 		rightSum += arr[i] 
-
-		# exclude current element 
-		# to the left_sum 
 		leftSum -= arr[i] 
-
-		if (rightSum == leftSum) : 
+		if rightSum == leftSum { 
 			return i 
-
-	# if it is not possible 
-	# to split array into 
-	# two parts. 
+		}
+	}
+ 
 	return -1
+}
 
-# Prints two parts after 
-# finding split point 
-# using findSplitPoint() 
-def printTwoParts(arr, n) : 
-	splitPoint = findSplitPoint(arr, n) 
+func printTwoParts(arr []int, n int) { 
+	splitPoint := findSplitPoint(arr, n) 
 
-	if (splitPoint == -1 or splitPoint == n ) : 
-		print ("Not Possible") 
+	if splitPoint == -1 || splitPoint == n { 
+		fmt.Println("Not Possible") 
 		return
+	}
 
-	for i in range (0, n) : 
-		if(splitPoint == i) : 
-			print ("") 
-		print (arr[i], end = " ")		 
+	for i:=0; i<n; i++ { 
+		if splitPoint == i { 
+			fmt.Println() 
+		}
+		fmt.Print(arr[i], " ")
+	}		 
+}
 
-# Driver Code 
-arr = [1, 2, 3, 4, 5, 5] 
-n = len(arr) 
-printTwoParts(arr, n) 
-
-# This code is contributed by Manish Shaw 
-# (manishshaw1) 
+func main() {
+	arr := []int{1, 2, 3, 4, 5, 5}
+	n := len(arr) 
+	printTwoParts(arr, n) 
+}

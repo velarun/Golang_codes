@@ -23,7 +23,7 @@ func main() {
 			second = largest;
 			largest = i;
 		} else if (i > second) {
-		      	second = i;
+		    second = i;
 		}
 	}
 
