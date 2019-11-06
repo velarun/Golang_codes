@@ -56,6 +56,37 @@ func (l *List) Reverse() {
 	l.head = last
 }
 
+func ReverseNth(head *Node, k int) *Node { 
+
+	current := head
+	var next *Node
+	var last *Node
+	var count int
+
+	for count < k && current != nil {
+		next = current.next
+		current.next = last
+		last = current
+		current = next
+		count++
+	}
+
+    if next != nil { 
+		head.next = ReverseNth(next, k)
+	}
+
+    return last 
+}
+
+/* Function to print reverse of linked list */
+func printReverse(head *Node) { 
+	if head == nil {
+		return
+	} 
+	printReverse(head.next)
+	fmt.Print(head.data, "->") 
+}
+
 func (l *List) DeleteNodeData(dat string) {
 
 	temp := l.head
@@ -164,7 +195,14 @@ func main() {
 	l.InsertNodePos(&Node{data: "par"}, l.head.next.next)
 	l.Display()
 
+	fmt.Println("\n=====================")
+	printReverse(l.head)
+	fmt.Println("\n=====================")
+
 	l.Reverse()
+	l.Display()
+
+	l.head = ReverseNth(l.head, 2)
 	l.Display()
 
 	l.DeleteNodeData("foo")
